@@ -73,6 +73,7 @@
 	"dependencies": {
 		"@leeoniya/ufuzzy": "^1.0.2",
 		"date-fns": "^2.29.3",
+		"dotenv": "^16.0.3",
 		"parse-link-header": "^2.0.0",
 		"prism-themes": "^1.9.0",
 		"remark": "^14.0.2",

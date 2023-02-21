@@ -18,6 +18,10 @@ import rehypeAutoLink from 'rehype-autolink-headings';
 import remarkToc from 'remark-toc';
 import remarkGithub from 'remark-github';
 import remarkGfm from 'remark-gfm';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 const remarkPlugins = [
 	remarkToc,
 	[remarkGithub, { repository: 'https://github.com/sw-yx/swyxkit/' }],
@@ -44,12 +48,12 @@ let allBlogposts = [];
  * @returns {string}
  */
 function slugify(text) {
-    return text
-        .toString()                 // Cast to string (optional)
-        .normalize('NFKD')          // The normalize() using NFKD method returns the Unicode Normalization Form of a given string.
-        .toLowerCase()              // Convert the string to lowercase letters
-        .trim()                     // Remove whitespace from both sides of a string (optional)
-        .replace(/\s+/g, '-')       // Replace spaces with hyphen
+	return text
+		.toString()                 // Cast to string (optional)
+		.normalize('NFKD')          // The normalize() using NFKD method returns the Unicode Normalization Form of a given string.
+		.toLowerCase()              // Convert the string to lowercase letters
+		.trim()                     // Remove whitespace from both sides of a string (optional)
+		.replace(/\s+/g, '-')       // Replace spaces with hyphen
 		.replace(/[^\w-]+/g, '')   // Remove all non-word chars
 		.replace(/--+/g, '-')     // Replace multiple hyphen with single hyphen
 		.replace(/(^-|-$)/g, ''); // Remove leading or trailing hyphen
@@ -95,7 +99,6 @@ export async function listContent(providedFetch) {
 		const res = await providedFetch(next?.url ?? url, {
 			headers: authheader
 		});
-
 		const issues = await res.json();
 		if ('message' in issues && res.status > 400)
 			throw new Error(res.status + ' ' + res.statusText + '\n' + (issues && issues.message));
