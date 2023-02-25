@@ -26,8 +26,8 @@
 
 <nav
 	class="relative mb-16 flex w-full items-center justify-between
-	border-gray-200 bg-jred-500 px-8 py-8 dark:border-gray-700
-	dark:bg-gray-900 dark:text-gray-100"
+	border-gray-200 bg-jred-500 px-8 py-8  text-jblue-500 dark:border-gray-700
+	dark:bg-jorange-500 dark:text-gray-100"
 >
 	<a href="#skip" class="skip-nav">Skip to content</a>
 	<MobileMenu />
@@ -35,20 +35,20 @@
 		<li>
 			<NavLink href="/">Home</NavLink>
 		</li>
-		<li>
-			<NavLink href="/blog">Blog</NavLink>
-		</li>
-		<li>
+		<!-- <li>
+			<NavLink href="/blog">Articles</NavLink>
+		</li> -->
+		<!-- <li>
 			<NavLink href="/about">About</NavLink>
-		</li>
-		<li>
+		</li> -->
+		<!-- <li>
 			<a
 				class="hidden rounded-lg p-1 text-white no-underline transition-all  hover:underline dark:text-gray-200 sm:px-3 sm:py-2 md:inline-block"
 				rel="external"
 				href={'/rss.xml'}
 				><span class="capsize">RSS</span>
 			</a>
-		</li>
+		</li> -->
 	</ul>
 	<div class="mr-16 flex items-center space-x-4">
 		<!-- RSS -->
@@ -76,7 +76,7 @@
 			</svg>
 		</a> -->
 		<!-- Github -->
-		<a
+		<!-- <a
 			class="rounded-lg text-gray-700 hover:bg-jorange-500"
 			href={REPO_URL}
 			aria-label="GitHub source"
@@ -96,10 +96,10 @@
 					clip-rule="evenodd"
 				/>
 			</svg>
-		</a>
+		</a> -->
 		<button
 			aria-label="Toggle Dark Mode"
-			class="ml-1 flex h-9 w-9 items-center justify-center rounded-lg hover:bg-jorange-500
+			class="ml-1 flex h-9 w-9 items-center justify-center rounded-lg hover:bg-jorange-500 dark:hover:bg-jblue-300
 			transition-all"
 			on:click={toggleDarkMode}
 		>
@@ -109,7 +109,7 @@
 					viewBox="0 0 24 24"
 					fill="none"
 					stroke="currentColor"
-					class="h-5 w-5 text-gray-800 dark:text-yellow-100"
+					class="h-5 w-5 text-gray-800 dark:text-jblue-500"
 				>
 					<path
 						stroke-linecap="round"
@@ -125,7 +125,7 @@
 					viewBox="0 0 24 24"
 					fill="none"
 					stroke="currentColor"
-					class="h-5 w-5 text-gray-800 dark:text-gray-200"
+					class="h-5 w-5 text-orange-500 dark:text-gray-200"
 				>
 					<path
 						stroke-linecap="round"

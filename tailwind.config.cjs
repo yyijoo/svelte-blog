@@ -9,7 +9,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				black: '#08399b',
+				black: '#083087',
 				white: '#fff8eb',
 				gray: {
 					700: '#08399b',
@@ -19,6 +19,7 @@ module.exports = {
 					700: '#08399b'
 				},
 				jblue: {
+					300: '#C5D7FB',
 					500: '#0d50dc'
 				},
 				jred: {
@@ -67,11 +68,11 @@ module.exports = {
 							'border-radius': '0rem',
 						},
 						'a:hover': {
-							color: '#31cdce !important',
+							color: '#9c52f2 !important',
 							textDecoration: 'underline !important'
 						},
 						a: {
-							color: '#2071ad',
+							color: '#083087',
 							textDecoration: 'none'
 						},
 						'a code': {

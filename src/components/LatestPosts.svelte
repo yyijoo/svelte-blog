@@ -8,7 +8,7 @@
 <section class="mb-8 w-full">
 	<h3
 		id="latest"
-		class="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl"
+		class="mb-6 text-2xl font-bold tracking-tight text-black dark:bg-black dark:text-white md:text-4xl"
 	>
 		Latest Posts
 	</h3>
@@ -16,13 +16,13 @@
 		{#each items as item (item.slug)}
 			<li>
 				<a class="font-bold" data-sveltekit-preload-data href={item.slug}>{item.title}</a>
-				<span class="hidden text-xs text-black dark:text-gray-400 sm:inline"
+				<span class="hidden text-xs text-black dark:text-white sm:inline"
 					>{new Date(item.date).toISOString().slice(0, 10)}</span
 				>
 			</li>
 		{/each}
 	</ul>
-	<a
+	<!-- <a
 		class="mt-2 flex h-6 rounded-lg leading-7 transition-all dark:text-gray-400 dark:hover:text-gray-200"
 		href="/blog"
 		>Search and see all posts<svg
@@ -38,5 +38,5 @@
 				d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
 			/></svg
 		></a
-	>
+	> -->
 </section>

@@ -13,10 +13,10 @@
 	/>
 </svelte:head>
 
-<div class="flex flex-col justify-center dark:bg-gray-900">
+<div class="flex flex-col justify-center dark:bg-black">
 	<Nav />
 </div>
-<main class="flex flex-col justify-center dark:bg-gray-900">
+<main class="flex flex-col justify-center dark:bg-black">
 	<slot />
 </main>
 

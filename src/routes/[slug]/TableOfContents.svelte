@@ -20,12 +20,12 @@
 	>
 		{#if !isOpen}
 			<button class="flex justify-center items-center z-50" on:click={() => (isOpen = !isOpen)}>
-				<h2 class="text-orange-700 dark:text-orange-400">Table of <br /> Contents</h2>
+				<h2 class="text-orange-500 dark:text-orange-500">Table of <br /> Contents</h2>
 			</button>
 		{/if}
 		{#if isOpen}
 			<ul class="space-y-2 max-h-80 overflow-auto">
-				<h2 class="text-orange-700 dark:text-orange-400">
+				<h2 class="text-orange-500 dark:text-orange-500">
 					Table of Contents
 					<button class="hover:text-white" on:click={() => (isOpen = !isOpen)}> [X] </button>
 				</h2>

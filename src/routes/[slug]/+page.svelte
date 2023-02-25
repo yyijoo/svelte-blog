@@ -71,16 +71,16 @@
 
 <TableOfContents {tocStore} />
 
-<article use:toc={{ store: tocStore, anchor: false, observe: true, selector: ':where(h1, h2, h3)' }} class="items-start justify-center w-full mt-16 mb-32 prose swyxcontent dark:prose-invert max-w-none px-24 text-black">
+<article use:toc={{ store: tocStore, anchor: false, observe: true, selector: ':where(h1, h2, h3)' }} class="items-start justify-center w-full mt-16 mb-32 prose swyxcontent dark:prose-invert max-w-none px-24 text-black dark:text-white">
 	<h1 class="mb-8 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl ">
 		{json.title}
 	</h1>
 	<div
 		class="flex justify-between w-full mt-2 bg border-red sm:items-start md:flex-row md:items-center"
 	>
-		<p class="flex items-center text-sm text-gray-700 dark:text-gray-300">{AUTHOR}</p>
-		<p class="flex items-center text-sm text-gray-600 dark:text-gray-400">
-			<a href={json.ghMetadata.issueUrl} rel="external noreferrer" class="no-underline" target="_blank">
+		<p class="flex items-center text-sm text-black dark:text-white">{AUTHOR}</p>
+		<p class="flex items-center text-sm text-black dark:text-white">
+			<a href={json.ghMetadata.issueUrl} rel="external noreferrer" class="no-underline dark:text-white" target="_blank">
 				<!-- <span class="mr-4 font-mono text-xs text-gray-700 text-opacity-70 dark:text-gray-300"
 					>{json.ghMetadata.reactions.total_count} reactions</span
 				> -->
@@ -89,7 +89,7 @@
 		</p>
 	</div>
 	<div
-		class="-mx-4 my-2 flex h-1 w-[100vw] bg-gradient-to-r from-jred-500 via-jorange-500 to-jpurple-500 sm:mx-0 sm:w-full"
+		class="-mx-4 my-2 flex h-1 w-[100vw] bg-gradient-to-r from-jorange-500 to-jpurple-500 sm:mx-0 sm:w-full"
 	/>
 	{@html json.content}
 </article>
@@ -112,14 +112,14 @@
 				reactions={json.ghMetadata.reactions}
 			/>
 		{:else}
-			<a href={json.ghMetadata.issueUrl}>Leave a reaction </a>
+			<a href={json.ghMetadata.issueUrl} class="dark:text-white">Leave a reaction </a>
 			if you liked this post! 🧡
 		{/if}
 	</div>
 	<div class="mb-8 text-black dark:text-white " bind:this={commentsEl} use:utterances={{number: issueNumber}}>
 		Loading comments...
 		<!-- svelte-ignore a11y-mouse-events-have-key-events -->
-		<button class="my-4 bg-blue-200 hover:bg-blue-100 text-black p-2 rounded-lg" 
+		<button class="my-4 bg-blue-200 hover:bg-blue-100 text-black dark:text-white p-2 rounded-lg" 
 			on:click={() => injectScript(commentsEl, issueNumber)}
 			on:mouseover={() => injectScript(commentsEl, issueNumber)}
 		>Load now</button>
