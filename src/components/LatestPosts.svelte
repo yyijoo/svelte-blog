@@ -12,7 +12,7 @@
 	>
 		Latest Posts
 	</h3>
-	<ul class="space-y-2 text-white">
+	<ul class="space-y-2">
 		{#each items as item (item.slug)}
 			<li>
 				<a class="font-bold" data-sveltekit-preload-data href={item.slug}>{item.title}</a>
@@ -23,7 +23,7 @@
 		{/each}
 	</ul>
 	<a
-		class="mt-2 flex h-6 rounded-lg leading-7 text-gray-600 transition-all dark:text-gray-400 dark:hover:text-gray-200"
+		class="mt-2 flex h-6 rounded-lg leading-7 transition-all dark:text-gray-400 dark:hover:text-gray-200"
 		href="/blog"
 		>Search and see all posts<svg
 			xmlns="http://www.w3.org/2000/svg"

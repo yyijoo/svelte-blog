@@ -1,5 +1,5 @@
 <script>
-	import { MY_TWITTER_HANDLE, SITE_URL } from '$lib/siteConfig';
+	import { AUTHOR, MY_TWITTER_HANDLE, SITE_URL } from '$lib/siteConfig';
 	// import Comments from '../../components/Comments.svelte';
 
 	import 'prism-themes/themes/prism-shades-of-purple.min.css';
@@ -71,14 +71,14 @@
 
 <TableOfContents {tocStore} />
 
-<article use:toc={{ store: tocStore, anchor: false, observe: true, selector: ':where(h1, h2, h3)' }} class="items-start justify-center w-full mx-auto mt-16 mb-32 prose swyxcontent dark:prose-invert max-w-none">
-	<h1 class="md:text-center mb-8 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl ">
+<article use:toc={{ store: tocStore, anchor: false, observe: true, selector: ':where(h1, h2, h3)' }} class="items-start justify-center w-full mt-16 mb-32 prose swyxcontent dark:prose-invert max-w-none px-24 text-black">
+	<h1 class="mb-8 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl ">
 		{json.title}
 	</h1>
 	<div
 		class="flex justify-between w-full mt-2 bg border-red sm:items-start md:flex-row md:items-center"
 	>
-		<p class="flex items-center text-sm text-gray-700 dark:text-gray-300">swyx</p>
+		<p class="flex items-center text-sm text-gray-700 dark:text-gray-300">{AUTHOR}</p>
 		<p class="flex items-center text-sm text-gray-600 dark:text-gray-400">
 			<a href={json.ghMetadata.issueUrl} rel="external noreferrer" class="no-underline" target="_blank">
 				<!-- <span class="mr-4 font-mono text-xs text-gray-700 text-opacity-70 dark:text-gray-300"
@@ -89,12 +89,12 @@
 		</p>
 	</div>
 	<div
-		class="-mx-4 my-2 flex h-1 w-[100vw] bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 sm:mx-0 sm:w-full"
+		class="-mx-4 my-2 flex h-1 w-[100vw] bg-gradient-to-r from-jred-500 via-jorange-500 to-jpurple-500 sm:mx-0 sm:w-full"
 	/>
 	{@html json.content}
 </article>
 
-<div class="max-w-2xl mx-auto">
+<div class="mx-24">
 	{#if json?.tags?.length}
 		<p class="!text-slate-400 flex-auto mb-4 italic">
 			Tagged in: 
@@ -126,7 +126,7 @@
 		<!-- <Comments ghMetadata={json.ghMetadata} /> -->
 	</div>
 
-	<Newsletter />
+	<!-- <Newsletter /> -->
 	<LatestPosts items={data.list} />
 </div>
 
@@ -140,7 +140,7 @@
 			--popout: minmax(0, 2rem);
 			--feature: minmax(0, 5rem);
 
-			display: grid;
+			/* display: grid;
 			grid-template-columns: 
 				[full-start] var(--full)
 				[feature-start] 0rem
@@ -148,19 +148,19 @@
 				[content-start] var(--content) [content-end]
 				[popout-end] 0rem
 				[feature-end] 0rem
-				var(--full) [full-end]
+				var(--full) [full-end] */
 		}
 
 		@media (min-width: 768px) {
 			.swyxcontent {
-				grid-template-columns:
+				/* grid-template-columns:
 					[full-start] var(--full)
 					[feature-start] var(--feature)
 					[popout-start] var(--popout)
 					[content-start] var(--content) [content-end]
 					var(--popout) [popout-end]
 					var(--feature) [feature-end]
-					var(--full) [full-end];
+					var(--full) [full-end]; */
 			}
 		}
 

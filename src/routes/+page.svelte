@@ -36,36 +36,8 @@
 </svelte:head>
 
 <div
-	class="mx-auto flex max-w-2xl flex-col items-start justify-center border-gray-200 px-4 pb-16 dark:border-gray-700 sm:px-8"
+	class="flex flex-col items-start justify-center border-gray-200 px-24 pb-16 dark:border-gray-700"
 >
-	<div class="flex flex-col-reverse items-start sm:flex-row">
-		<div class="flex flex-col pr-8">
-			<h1 class="mb-3 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl">
-				This is
-
-				<span
-					class="relative ml-2 inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-red-500"
-				>
-					<span class="relative skew-y-3 text-yellow-400">{SITE_TITLE}</span>
-				</span>
-				!
-			</h1>
-			<h2 class="mb-4 text-gray-700 dark:text-gray-200">
-				An opinionated blog starter for <span class="font-semibold"
-					>SvelteKit + Tailwind + Netlify/Vercel.</span
-				>
-				Updated for
-				<a href="https://github.com/sveltejs/kit/">SvelteKit 1.0</a>!
-			</h2>
-			<p class="mb-16 text-gray-600 dark:text-gray-400">
-				<a href={REPO_URL}>View source and feature list here!</a>
-			</p>
-		</div>
-		<!-- <div
-				class="w-[80px] h-[80px] rounded-full sm:w-[176px] sm:h-[136px] relative mb-8 sm:mb-0 mr-auto bg-cyan-300 bg-opacity-25"
-			/> -->
-	</div>
-
 	<!-- <section class="w-full mb-16">
 		<h3 class="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
 			Featured Posts
@@ -83,5 +55,5 @@
 
 	<LatestPosts {items} />
 
-	<Newsletter />
+	<!-- <Newsletter /> -->
 </div>

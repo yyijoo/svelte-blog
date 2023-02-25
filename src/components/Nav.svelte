@@ -25,13 +25,13 @@
 </script>
 
 <nav
-	class="relative mx-auto flex w-full max-w-2xl items-center justify-between border-gray-200
-	bg-gray-50 bg-opacity-60 py-8 text-gray-900 dark:border-gray-700 dark:bg-gray-900
-	dark:text-gray-100 sm:pb-16"
+	class="relative mb-16 flex w-full items-center justify-between
+	border-gray-200 bg-jred-500 px-8 py-8 dark:border-gray-700
+	dark:bg-gray-900 dark:text-gray-100"
 >
 	<a href="#skip" class="skip-nav">Skip to content</a>
 	<MobileMenu />
-	<ul class="ml-[-0.60rem] flex">
+	<ul class="ml-12 pl-1 flex">
 		<li>
 			<NavLink href="/">Home</NavLink>
 		</li>
@@ -43,14 +43,14 @@
 		</li>
 		<li>
 			<a
-				class="hidden rounded-lg p-1 text-gray-800 transition-all hover:bg-yellow-200 dark:text-gray-200 dark:hover:bg-yellow-800 sm:px-3 sm:py-2 md:inline-block"
+				class="hidden rounded-lg p-1 text-white no-underline transition-all  hover:underline dark:text-gray-200 sm:px-3 sm:py-2 md:inline-block"
 				rel="external"
 				href={'/rss.xml'}
 				><span class="capsize">RSS</span>
 			</a>
 		</li>
 	</ul>
-	<div class="flex items-center space-x-4">
+	<div class="mr-16 flex items-center space-x-4">
 		<!-- RSS -->
 		<!-- <a
 			class="text-gray-700 hover:bg-yellow-200 dark:text-gray-200 dark:hover:bg-yellow-800"
@@ -77,8 +77,7 @@
 		</a> -->
 		<!-- Github -->
 		<a
-			class="rounded-lg text-gray-700 hover:bg-yellow-200 dark:text-gray-200
-			dark:hover:bg-yellow-800"
+			class="rounded-lg text-gray-700 hover:bg-jorange-500"
 			href={REPO_URL}
 			aria-label="GitHub source"
 		>
@@ -100,8 +99,8 @@
 		</a>
 		<button
 			aria-label="Toggle Dark Mode"
-			class="ml-1 flex h-9 w-9 items-center justify-center rounded-lg bg-yellow-400 ring-yellow-400
-			transition-all hover:ring-2 dark:bg-yellow-800"
+			class="ml-1 flex h-9 w-9 items-center justify-center rounded-lg hover:bg-jorange-500
+			transition-all"
 			on:click={toggleDarkMode}
 		>
 			{#if isDark}

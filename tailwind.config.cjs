@@ -8,6 +8,35 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			colors: {
+				black: '#08399b',
+				white: '#fff8eb',
+				gray: {
+					700: '#08399b',
+					800: '#08399b'
+				},
+				yellow: {
+					700: '#08399b'
+				},
+				jblue: {
+					500: '#0d50dc'
+				},
+				jred: {
+					500: '#d50000'
+				},
+				jpurple: {
+					500: '#9c52f2'
+				},
+				jorange: {
+					100: '#FDF1D9',
+					500: '#ffab00'
+				},
+				// jblue: {
+				// 	500: '#0d50dc',
+				// 	900: '#08399b',
+				// 	// 900: '#03153a'
+				// }
+			},
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
