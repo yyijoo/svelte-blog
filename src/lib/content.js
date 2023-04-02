@@ -1,24 +1,24 @@
-import { compile } from 'mdsvex';
 import { dev } from '$app/environment';
 import grayMatter from 'gray-matter';
-import {
-	GH_USER_REPO,
-	APPROVED_POSTERS_GH_USERNAME,
-	GH_PUBLISHED_TAGS,
-	REPO_OWNER
-} from './siteConfig';
+import { compile } from 'mdsvex';
 import parse from 'parse-link-header';
+import rehypeAutoLink from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
+import rehypeStringify from 'rehype-stringify';
 import { remark } from 'remark';
 import remarkParse from 'remark-parse';
 import remarkStringify from 'remark-stringify';
-import rehypeStringify from 'rehype-stringify';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutoLink from 'rehype-autolink-headings';
+import {
+	APPROVED_POSTERS_GH_USERNAME,
+	GH_PUBLISHED_TAGS,
+	GH_USER_REPO,
+	REPO_OWNER
+} from './siteConfig';
 
-import remarkToc from 'remark-toc';
-import remarkGithub from 'remark-github';
-import remarkGfm from 'remark-gfm';
 import dotenv from 'dotenv';
+import remarkGfm from 'remark-gfm';
+import remarkGithub from 'remark-github';
+import remarkToc from 'remark-toc';
 
 dotenv.config();
 
@@ -265,7 +265,7 @@ function parseIssue(issue) {
 		title,
 		subtitle: data.subtitle,
 		description,
-		category: data.category?.toLowerCase() || 'note', // all posts assumed to be "note"s unless otherwise specified
+		category: data.category ? data.category?.toLowerCase() : 'Note', // all posts assumed to be "note"s unless otherwise specified
 		tags,
 		image: data.image ?? data.cover_image,
 		canonical: data.canonical, // for canonical URLs of something published elsewhere
